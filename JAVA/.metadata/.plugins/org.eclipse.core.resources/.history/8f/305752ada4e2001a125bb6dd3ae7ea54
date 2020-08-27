@@ -1,0 +1,18 @@
+package chap03;
+
+public class infinityAndNaNCheckExample {
+	public static void main(String[] args) {
+		int x =  5;
+		double y = 0.0;
+		double z = x / y;
+		
+		System.out.println(Double.isInfinite(z));
+		System.out.println(Double.isNaN(z));
+
+		System.out.println(z);
+		System.out.println(z+2);
+		// 대문자로 시작하는 파란 표시는 객체들, 각자의 내장 메소드를 가지고 있음
+		// 엄밀히는 변수와 다르지만 상호 호환은 된다.
+	}
+
+}
