@@ -10,7 +10,7 @@ def main():
     pygame.display.set_caption('D   I   C   E   R   S')
 
     # 변수 설정
-    BLACK = (50, 50, 50)
+    GRAY = (180, 180, 180)
     WHITE = (250, 250, 250)
     RED = (200, 0, 0)
     DICERSFONT = 'material\\NEXONFootballGothicL.ttf'
@@ -26,20 +26,20 @@ def main():
 
     # 타이틀 텍스트
     TITLE_SURFACE = TITLEFONT.render('D    I    C    E    R    $', True, RED)
-    TITLE_SURFACE.get_rect()
-    TITLE_RECT = (80, 150)
+    TITLE_RECT = TITLE_SURFACE.get_rect(topleft = [80, 150])
+
 
     # 시작 텍스트
-    START_SURFACE = MAINFONT.render('start', True, BLACK)
+    START_SURFACE = MAINFONT.render('start', True, GRAY)
     START_RECT = START_SURFACE.get_rect(center=[400, 430])
 
     # 랭크 텍스트
 
-    RANK_SURFACE = MAINFONT.render('ranking', True, BLACK)
+    RANK_SURFACE = MAINFONT.render('ranking', True, GRAY)
     RANK_RECT = RANK_SURFACE.get_rect(center=[400, 475])
 
     # 종료 텍스트
-    EXIT_SURFACE = MAINFONT.render('exit', True, BLACK)
+    EXIT_SURFACE = MAINFONT.render('exit', True, GRAY)
     EXIT_RECT = EXIT_SURFACE.get_rect(center=[400, 520])
 
 
@@ -47,11 +47,13 @@ def main():
 
     while True:
         SURFACE.fill(WHITE)
-        pygame.draw.rect(SURFACE, BLACK, UPPERBOX, 3)
-        pygame.draw.rect(SURFACE, BLACK, LOWERBOX, 3)
+        pygame.draw.rect(SURFACE, GRAY, UPPERBOX, 5)
+        pygame.draw.rect(SURFACE, GRAY, LOWERBOX, 5)
 
         SURFACE.blit(START_SURFACE, START_RECT)
+
         SURFACE.blit(TITLE_SURFACE, TITLE_RECT)
+
         SURFACE.blit(RANK_SURFACE, RANK_RECT)
         SURFACE.blit(EXIT_SURFACE, EXIT_RECT)
 

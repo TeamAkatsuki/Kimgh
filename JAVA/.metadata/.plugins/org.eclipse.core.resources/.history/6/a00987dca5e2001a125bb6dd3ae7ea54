@@ -1,9 +1,0 @@
-package chap03;
-
-public class InputDataCheckNaNExample {
-	public static void main(String[] args) {
-		String userInput = "NaN";
-		double val = Double.valueOf(userInput);
-		//Double.valueOf(String s) 문자열을 더블로 바꾼다.
-	}
-}
