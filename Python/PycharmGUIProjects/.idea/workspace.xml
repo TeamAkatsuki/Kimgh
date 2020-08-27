@@ -14,14 +14,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88145d66-af75-48fe-84e3-7edcd41ad382" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/asdf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../JAVA/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../../JAVA/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DICERS_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/DICERS_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DICERS_rank.py" beforeDir="false" afterPath="$PROJECT_DIR$/DICERS_rank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranks/clever.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ranks/clever.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranks/long.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ranks/long.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ranks/rich.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ranks/rich.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DICERS_rule.py" beforeDir="false" afterPath="$PROJECT_DIR$/DICERS_rule.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../rlarmsrms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -220,6 +213,10 @@
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
     <state x="659" y="346" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1858.1200@0.0.1858.1200" timestamp="1598314323655" />
+    <state x="772" y="506" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog" timestamp="1598516971662">
+      <screen x="0" y="0" width="1858" height="1200" />
+    </state>
+    <state x="772" y="506" key="#com.jetbrains.python.refactoring.move.PyMakeFunctionTopLevelDialog/0.0.1858.1200@0.0.1858.1200" timestamp="1598516971662" />
     <state x="675" y="452" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1598511697472">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
@@ -232,38 +229,38 @@
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
     <state x="709" y="355" key="FileChooserDialogImpl/0.0.1858.1200@0.0.1858.1200" timestamp="1598514493372" />
-    <state width="1837" height="412" key="GridCell.Tab.0.bottom" timestamp="1598514044145">
+    <state width="1837" height="328" key="GridCell.Tab.0.bottom" timestamp="1598525360911">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.0.bottom/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044145" />
-    <state width="1837" height="412" key="GridCell.Tab.0.center" timestamp="1598514044145">
+    <state width="1837" height="328" key="GridCell.Tab.0.bottom/0.0.1858.1200@0.0.1858.1200" timestamp="1598525360911" />
+    <state width="1837" height="328" key="GridCell.Tab.0.center" timestamp="1598525360910">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.0.center/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044145" />
-    <state width="1837" height="412" key="GridCell.Tab.0.left" timestamp="1598514044145">
+    <state width="1837" height="328" key="GridCell.Tab.0.center/0.0.1858.1200@0.0.1858.1200" timestamp="1598525360910" />
+    <state width="1837" height="328" key="GridCell.Tab.0.left" timestamp="1598525360910">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.0.left/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044145" />
-    <state width="1837" height="412" key="GridCell.Tab.0.right" timestamp="1598514044145">
+    <state width="1837" height="328" key="GridCell.Tab.0.left/0.0.1858.1200@0.0.1858.1200" timestamp="1598525360910" />
+    <state width="1837" height="328" key="GridCell.Tab.0.right" timestamp="1598525360911">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.0.right/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044145" />
-    <state width="1837" height="412" key="GridCell.Tab.1.bottom" timestamp="1598514044146">
+    <state width="1837" height="328" key="GridCell.Tab.0.right/0.0.1858.1200@0.0.1858.1200" timestamp="1598525360911" />
+    <state width="1837" height="412" key="GridCell.Tab.1.bottom" timestamp="1598516982284">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.1.bottom/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044146" />
-    <state width="1837" height="412" key="GridCell.Tab.1.center" timestamp="1598514044146">
+    <state width="1837" height="412" key="GridCell.Tab.1.bottom/0.0.1858.1200@0.0.1858.1200" timestamp="1598516982284" />
+    <state width="1837" height="412" key="GridCell.Tab.1.center" timestamp="1598516982283">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.1.center/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044146" />
-    <state width="1837" height="412" key="GridCell.Tab.1.left" timestamp="1598514044146">
+    <state width="1837" height="412" key="GridCell.Tab.1.center/0.0.1858.1200@0.0.1858.1200" timestamp="1598516982283" />
+    <state width="1837" height="412" key="GridCell.Tab.1.left" timestamp="1598516982283">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.1.left/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044146" />
-    <state width="1837" height="412" key="GridCell.Tab.1.right" timestamp="1598514044146">
+    <state width="1837" height="412" key="GridCell.Tab.1.left/0.0.1858.1200@0.0.1858.1200" timestamp="1598516982283" />
+    <state width="1837" height="412" key="GridCell.Tab.1.right" timestamp="1598516982283">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
-    <state width="1837" height="412" key="GridCell.Tab.1.right/0.0.1858.1200@0.0.1858.1200" timestamp="1598514044146" />
+    <state width="1837" height="412" key="GridCell.Tab.1.right/0.0.1858.1200@0.0.1858.1200" timestamp="1598516982283" />
     <state x="430" y="244" key="SettingsEditor" timestamp="1598321480602">
       <screen x="0" y="0" width="1858" height="1200" />
     </state>
@@ -280,11 +277,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/DICERS_game.py</url>
-          <line>401</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/DICERS_rankcal.py</url>
           <line>27</line>

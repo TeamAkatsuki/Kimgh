@@ -1,1 +1,1 @@
-asdf,50.0,default1,1.0,default2,1.0,default3,1.0,
+default1,1.0,default2,1.0,default3,1.0,

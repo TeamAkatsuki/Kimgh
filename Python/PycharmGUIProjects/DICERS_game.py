@@ -14,9 +14,9 @@ def game():
     PALEBLUE = (100, 100, 200)
     BLUE = (0, 0, 255)
     PALERED = (200, 100, 100)
-    RED = (255, 0, 0)
+    RED = (200, 0, 0)
     GOLD = (150, 130, 35)
-    SILVER = (192, 192, 192)
+    GRAY = (180, 180, 180)
 
 
     point_status = 100  # start point
@@ -49,13 +49,13 @@ def game():
 
 
 
-        pygame.draw.rect(SURFACE, SILVER, SLOTBOX, 3)
-        pygame.draw.rect(SURFACE, SILVER, DICEBOX1, 3)
-        pygame.draw.rect(SURFACE, SILVER, DICEBOX2, 3)
-        pygame.draw.rect(SURFACE, SILVER, DICEBOX3, 3)
-        pygame.draw.rect(SURFACE, SILVER, SLOTINBOX, 3)
-        pygame.draw.rect(SURFACE, SILVER, BPBOX, 3)
-        pygame.draw.rect(SURFACE, SILVER, BTNBOX, 3)
+        pygame.draw.rect(SURFACE, GRAY, SLOTBOX, 3)
+        pygame.draw.rect(SURFACE, GRAY, DICEBOX1, 3)
+        pygame.draw.rect(SURFACE, GRAY, DICEBOX2, 3)
+        pygame.draw.rect(SURFACE, GRAY, DICEBOX3, 3)
+        pygame.draw.rect(SURFACE, GRAY, SLOTINBOX, 3)
+        pygame.draw.rect(SURFACE, GRAY, BPBOX, 3)
+        pygame.draw.rect(SURFACE, GRAY, BTNBOX, 3)
 
         POINT_SURFACE = MAINFONT.render("보유 포인트 - " + str(point_status) + ' $', True, PALEBLUE)
         POINT_RECT = POINT_SURFACE.get_rect(topleft = [50, 440])
@@ -132,13 +132,11 @@ def game():
         YMBF_SURFACE = MIDDLEFONT.render("베팅 먼저 하세요!", True, PALERED, BLACK)
         YMBF_RECT = YMBF_SURFACE.get_rect(center = [400, 300])
         #
-        RETRY_SURFACE = MAINFONT.render("RETRY(GO TO MAIN)", True, BLACK)
+        RETRY_SURFACE = MAINFONT.render("RETRY(GO TO MAIN)", True, GRAY)
         RETRY_RECT = RETRY_SURFACE.get_rect(center=[165, 550])
 
-        SAVE_SURFACE = MAINFONT.render("SAVE TO RANK", True, BLACK)
+        SAVE_SURFACE = MAINFONT.render("SAVE TO RANK", True, GRAY)
         SAVE_RECT = SAVE_SURFACE.get_rect(center=[665, 550])
-
-
 
         #
 
@@ -153,7 +151,7 @@ def game():
 
         def anime(pi):
 
-            colors = (PALERED, PALEBLUE, GOLD, SILVER)
+            colors = (PALERED, PALEBLUE, GOLD, GRAY)
 
             DICE1NUM = BIGFONT.render(str(randint(1, 6)), True, colors[randint(0,3)])
             DICE1_RECT = DICE1NUM.get_rect(center=[125, 175])
@@ -267,9 +265,9 @@ def game():
                         if len(luck_list) == 1:
 
                             if luck_list[0] == 1: #111
-                                point_status += point_bet * 5
+                                point_status += point_bet * 10
 
-                                RESULT_111_SURFACE = MAINFONT.render('1 1 1 (+5배) (+' + str(5 * point_bet) +'$)', True, GOLD)
+                                RESULT_111_SURFACE = MAINFONT.render('1 1 1 (+10배) (+' + str(10 * point_bet) +'$)', True, GOLD)
                                 RESULT_111_RECT = RESULT_111_SURFACE.get_rect(midleft = result_midleft)
                                 SURFACE.blit(RESULT_111_SURFACE, RESULT_111_RECT)
 
@@ -283,9 +281,9 @@ def game():
 
 
                             else: # 222, 333, 444, 555, 666
-                                point_status += point_bet * 3
+                                point_status += point_bet * 5
 
-                                RESULT_TRIPLE_SURFACE = MAINFONT.render('트리플 (+3배) (+' + str(3 * point_bet) +'$)', True, BLACK, SILVER)
+                                RESULT_TRIPLE_SURFACE = MAINFONT.render('트리플 (+5배) (+' + str(5 * point_bet) +'$)', True, BLACK, GRAY)
                                 RESULT_TRIPLE_RECT = RESULT_TRIPLE_SURFACE.get_rect(midleft = result_midleft)
                                 SURFACE.blit(RESULT_TRIPLE_SURFACE, RESULT_TRIPLE_RECT)
 
@@ -298,7 +296,7 @@ def game():
 
 
                         elif len(luck_list) == 2: # 같은 수 2개
-                            point_status += point_bet
+                            point_status += point_bet * 1
 
                             RESULT_PAIR_SURFACE = MAINFONT.render('페어 (+1배) (+' + str(point_bet) +'$)',True, PALEBLUE)
                             RESULT_PAIR_RECT = RESULT_PAIR_SURFACE.get_rect(midleft = result_midleft)
@@ -316,10 +314,10 @@ def game():
 
                         else: # 다 다른 수
                             if luck_list[0] + luck_list[1] + luck_list[2] == 6: # 123
-                                point_status -= point_bet * 2
+                                point_status -= point_bet * 3
                                 SURFACE.blit(POINT_SURFACE, POINT_RECT)
                                 SURFACE.blit(BET_SURFACE, BET_RECT)
-                                RESULT_123_SURFACE = MAINFONT.render('1 2 3 (-2배) (-' + str(2*point_bet) +'$)', True, RED)
+                                RESULT_123_SURFACE = MAINFONT.render('1 2 3 (-3배) (-' + str(3*point_bet) +'$)', True, RED)
                                 RESULT_123_RECT = RESULT_123_SURFACE.get_rect(midleft = result_midleft)
                                 SURFACE.blit(RESULT_123_SURFACE, RESULT_123_RECT)
                                 pygame.display.update()
@@ -347,9 +345,9 @@ def game():
                             elif luck_list[0] + luck_list[1] + luck_list [2] == 15: # 456
                                 SURFACE.blit(POINT_SURFACE, POINT_RECT)
                                 SURFACE.blit(BET_SURFACE, BET_RECT)
-                                RESULT_SURFACE = MAINFONT.render('4 5 6 (+2배)(+' + str(2*point_bet) +'$)', True, BLUE)
+                                RESULT_SURFACE = MAINFONT.render('4 5 6 (+3배)(+' + str(3*point_bet) +'$)', True, BLUE)
                                 RESULT_RECT = RESULT_SURFACE.get_rect(midleft = result_midleft)
-                                point_status += point_bet * 2
+                                point_status += point_bet * 3
                                 point_bet = 0
                                 SURFACE.blit(RESULT_SURFACE, RESULT_RECT)
                                 pygame.display.update()
@@ -391,12 +389,12 @@ def game():
 
                 if SAVE_RECT.collidepoint(event.pos):
                     SURFACE.fill(BLACK)
-                    REGI_SURFACE = BIGFONT.render("새 입력창을 확인하세요.", True, SILVER)
+                    REGI_SURFACE = BIGFONT.render("새 입력창을 확인하세요.", True, GRAY)
                     REGI_RECT = REGI_SURFACE.get_rect(center = [400, 300])
                     SURFACE.blit(REGI_SURFACE, REGI_RECT)
                     pygame.display.update()
 
-                    import sys, os
+                    import sys
                     from PyQt5.QtWidgets import (QApplication, QWidget, QInputDialog)
 
                     class Register(QWidget):
@@ -411,7 +409,7 @@ def game():
                         def input(self):
                             text, ok = QInputDialog.getText(self, 'RANK', '이름을 입력하세요.')
 
-                            playername = str(text)
+                            playername = (str(text))
 
                             if ok:
                                 import DICERS_rankcal
@@ -476,7 +474,7 @@ def game():
                     SURFACE.blit(RETRY_SURFACE, RETRY_RECT)
 
                 elif SAVE_RECT.collidepoint(event.pos):
-                    SAVE_SURFACE = MAINFONT.render("$ SAVE TO RANK $", True, GOLD)
+                    SAVE_SURFACE = MAINFONT.render("$ SAVE TO RANK $", True, RED)
                     SAVE_RECT = SAVE_SURFACE.get_rect(center=[665, 550])
                     SURFACE.blit(SAVE_SURFACE, SAVE_RECT)
 
