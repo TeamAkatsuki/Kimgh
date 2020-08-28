@@ -16,10 +16,12 @@ def game_1():
     DICERSFONT = 'material//NEXONFootballGothicL.ttf'
     MAINFONT = pygame.font.Font(DICERSFONT, 25)
 
+
     GO_SURFACE = MAINFONT.render('click to play!', True, GRAY)
     GO_RECT = GO_SURFACE.get_rect(center=[450, 550])
 
     BACK_SURFACE = MAINFONT.render('back to menu', True, GRAY)
+
     BACK_RECT = BACK_SURFACE.get_rect(center=[665, 550])
 
     RULE_IMG = pygame.image.load('material//rule1.png')
@@ -32,6 +34,7 @@ def game_1():
 
         events = pygame.event.get()
         SURFACE.fill(WHITE)
+
         SURFACE.blit(BACK_SURFACE, BACK_RECT)
         SURFACE.blit(GO_SURFACE, GO_RECT)
         SURFACE.blit(RULE_IMG, RULE_POS)
@@ -45,6 +48,7 @@ def game_1():
                 if GO_RECT.collidepoint(event.pos):
                     GO_SURFACE = MAINFONT.render('$ click to play! $', True, RED)
                     GO_RECT = GO_SURFACE.get_rect(center=[450, 550])
+
                     SURFACE.blit(GO_SURFACE, GO_RECT)
 
                 elif BACK_RECT.collidepoint(event.pos):
