@@ -33,10 +33,15 @@ def main():
     START_SURFACE = MAINFONT.render('start', True, GRAY)
     START_RECT = START_SURFACE.get_rect(center=[400, 430])
 
+    # 사용법
+
+    HTP_SURFACE = MAINFONT.render('how to play', True, GRAY)
+    HTP_RECT = HTP_SURFACE.get_rect(center = [400, 460])
+
     # 랭크 텍스트
 
     RANK_SURFACE = MAINFONT.render('ranking', True, GRAY)
-    RANK_RECT = RANK_SURFACE.get_rect(center=[400, 475])
+    RANK_RECT = RANK_SURFACE.get_rect(center=[400, 490])
 
     # 종료 텍스트
     EXIT_SURFACE = MAINFONT.render('exit', True, GRAY)
@@ -51,6 +56,7 @@ def main():
         pygame.draw.rect(SURFACE, GRAY, LOWERBOX, 5)
 
         SURFACE.blit(START_SURFACE, START_RECT)
+        SURFACE.blit(HTP_SURFACE, HTP_RECT)
 
         SURFACE.blit(TITLE_SURFACE, TITLE_RECT)
 
@@ -65,12 +71,17 @@ def main():
 
                 if START_RECT.collidepoint(event.pos):
                     START_SURFACE = MAINFONT.render('$ start $', True, RED)
-                    START_RECT = START_SURFACE.get_rect(center = [400, 430])
+                    START_RECT = START_SURFACE.get_rect(center = [400, 425])
                     SURFACE.blit(START_SURFACE, START_RECT)
+
+                elif HTP_RECT.collidepoint(event.pos):
+                    HTP_SURFACE = MAINFONT.render('$ how to play $', True, RED)
+                    HTP_RECT = HTP_SURFACE.get_rect(center = [400,460])
+
 
                 elif RANK_RECT.collidepoint(event.pos):
                     RANK_SURFACE = MAINFONT.render('$ ranking $', True, RED)
-                    RANK_RECT = RANK_SURFACE.get_rect(center = [400, 475])
+                    RANK_RECT = RANK_SURFACE.get_rect(center = [400, 490])
                     SURFACE.blit(RANK_SURFACE, RANK_RECT)
 
                 elif EXIT_RECT.collidepoint(event.pos):
@@ -78,16 +89,23 @@ def main():
                     EXIT_RECT = EXIT_SURFACE.get_rect(center = [400, 520])
                     SURFACE.blit(EXIT_SURFACE, EXIT_RECT)
 
+
                 else:
                     main()
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if START_RECT.collidepoint(event.pos):
+                    import DICERS_game
+                    DICERS_game.game()
+
+                if HTP_RECT.collidepoint(event.pos):
                     import DICERS_rule
-                    DICERS_rule.game_1()
+                    DICERS_rule.rule()
+
                 if RANK_RECT.collidepoint(event.pos):
                     import DICERS_rank
                     DICERS_rank.rank()
+
                 if EXIT_RECT.collidepoint(event.pos):
                     pygame.quit()
                 else:

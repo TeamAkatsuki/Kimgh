@@ -1,7 +1,8 @@
-import pygame, sys
+import pygame
 from pygame.locals import *
 
-def game_1():
+
+def rule():
 
     pygame.init()
 
@@ -12,56 +13,42 @@ def game_1():
     WHITE = (250, 250, 250)
     RED = (200, 0, 0)
 
-
     DICERSFONT = 'material//NEXONFootballGothicL.ttf'
     MAINFONT = pygame.font.Font(DICERSFONT, 25)
 
     GO_SURFACE = MAINFONT.render('click to play!', True, GRAY)
     GO_RECT = GO_SURFACE.get_rect(center=[450, 550])
 
-    BACK_SURFACE = MAINFONT.render('back to menu', True, GRAY)
-    BACK_RECT = BACK_SURFACE.get_rect(center=[665, 550])
+    NEXT_SURFACE = MAINFONT.render('NEXT ->', True, RED)
+    NEXT_RECT = NEXT_SURFACE.get_rect(center=[640, 550])
 
     RULE_IMG = pygame.image.load('material//rule1.png')
+    RULE_IMG2 = pygame.image.load('material//rule2.png')
+    RULE_IMG3 = pygame.image.load('material//rule3.png')
+    RULE_IMG4 = pygame.image.load('material//rule4.png')
+
+
     RULE_POS = (40, 40)
-
-
-
 
     while True:
 
         events = pygame.event.get()
         SURFACE.fill(WHITE)
-        SURFACE.blit(BACK_SURFACE, BACK_RECT)
-        SURFACE.blit(GO_SURFACE, GO_RECT)
         SURFACE.blit(RULE_IMG, RULE_POS)
+        SURFACE.blit(NEXT_SURFACE, NEXT_RECT)
 
         for event in events:
             if event.type == QUIT:
                 pygame.quit()
 
-            if event.type == pygame.MOUSEMOTION:
-
-                if GO_RECT.collidepoint(event.pos):
-                    GO_SURFACE = MAINFONT.render('$ click to play! $', True, RED)
-                    GO_RECT = GO_SURFACE.get_rect(center=[450, 550])
-                    SURFACE.blit(GO_SURFACE, GO_RECT)
-
-                elif BACK_RECT.collidepoint(event.pos):
-                    BACK_SURFACE = MAINFONT.render('$ back to menu $', True, RED)
-                    BACK_RECT = BACK_SURFACE.get_rect(center=[665, 550])
-                    SURFACE.blit(BACK_SURFACE, BACK_RECT)
-
-                else:
-                    game_1()
-
             if event.type == pygame.MOUSEBUTTONDOWN:
-                if BACK_RECT.collidepoint(event.pos):
-                    import DICERS_main
-                    DICERS_main.main()
-
-                if GO_RECT.collidepoint(event.pos):
-                    import DICERS_game
-                    DICERS_game.game()
-
-            pygame.display.update()
+                if NEXT_RECT.collidepoint(event.pos):
+                    RULE_IMG = RULE_IMG2
+                    pygame.display.update()
+                    if NEXT_RECT.collidepoint(event.pos):
+                        RULE_IMG = RULE_IMG3
+                        pygame.display.update()
+                        if NEXT_RECT.collidepoint(event.pos):
+                            RULE_IMG = RULE_IMG4
+                            pygame.display.update()
+                        pygame.display.update()
