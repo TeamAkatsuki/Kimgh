@@ -153,22 +153,27 @@ def game():
 
             colors = (PALERED, PALEBLUE, GOLD, GRAY)
 
+            pygame.draw.rect(SURFACE, colors[randint(0,3)], DICEBOX1, 3)
+            pygame.time.delay(pi)
+            pygame.draw.rect(SURFACE, colors[randint(0,3)], DICEBOX2, 3)
+            pygame.time.delay(pi)
+            pygame.draw.rect(SURFACE, colors[randint(0, 3)], DICEBOX3, 3)
+            pygame.time.delay(pi)
             DICE1NUM = BIGFONT.render(str(randint(1, 6)), True, colors[randint(0,3)])
             DICE1_RECT = DICE1NUM.get_rect(center=[125, 175])
             SURFACE.blit(DICE1NUM, DICE1_RECT)
             pygame.time.delay(pi)
-
             DICE2NUM = BIGFONT.render(str(randint(1, 6)), True, colors[randint(0,3)])
             DICE2_RECT = DICE2NUM.get_rect(center=[300, 175])
             SURFACE.blit(DICE2NUM, DICE2_RECT)
             pygame.time.delay(pi)
-
             DICE3NUM = BIGFONT.render(str(randint(1, 6)), True, colors[randint(0,3)])
             DICE3_RECT = DICE3NUM.get_rect(center=[475, 175])
             SURFACE.blit(DICE3NUM, DICE3_RECT)
             pygame.display.update()
             pygame.time.delay(pi)
-        ANIMESPEED = 20
+
+        ANIMESPEED = 10
         anime(ANIMESPEED)
 
         # GET EVENTS
@@ -225,6 +230,10 @@ def game():
                     DICERS_main.main()
 
                 if ROLL_RECT.collidepoint(event.pos):
+                    pygame.draw.rect(SURFACE, BLACK, DICEBOX1)
+                    pygame.draw.rect(SURFACE, BLACK, DICEBOX2)
+                    pygame.draw.rect(SURFACE, BLACK, DICEBOX3)
+
                     result_midleft = [60, 330]
 
                     if point_bet != 0:
@@ -236,21 +245,21 @@ def game():
 
 
                         DICE1NUM = BIGFONT.render(str(temp_lucklist[0]), True, WHITE)
-                        pygame.draw.rect(SURFACE, BLACK, DICEBOX1)
+
                         DICE1_RECT = DICE1NUM.get_rect(center = [125,175])
                         SURFACE.blit(DICE1NUM, DICE1_RECT)
                         pygame.display.update()
                         pygame.time.delay(650)
 
                         DICE2NUM = BIGFONT.render(str(temp_lucklist[1]), True, WHITE)
-                        pygame.draw.rect(SURFACE, BLACK, DICEBOX2)
+
                         DICE2_RECT = DICE2NUM.get_rect(center = [300, 175])
                         SURFACE.blit(DICE2NUM, DICE2_RECT)
                         pygame.display.update()
                         pygame.time.delay(800)
 
                         DICE3NUM = BIGFONT.render(str(temp_lucklist[2]), True, WHITE)
-                        pygame.draw.rect(SURFACE, BLACK, DICEBOX3)
+
                         DICE3_RECT = DICE3NUM.get_rect(center=[475, 175])
                         SURFACE.blit(DICE3NUM, DICE3_RECT)
                         pygame.display.update()
@@ -298,7 +307,7 @@ def game():
                         elif len(luck_list) == 2: # 같은 수 2개
                             point_status += point_bet * 1
 
-                            RESULT_PAIR_SURFACE = MAINFONT.render('페어 (+1배) (+' + str(point_bet) +'$)',True, PALEBLUE)
+                            RESULT_PAIR_SURFACE = MAINFONT.render('같은 숫자 2개 (+1배) (+' + str(point_bet) +'$)',True, PALEBLUE)
                             RESULT_PAIR_RECT = RESULT_PAIR_SURFACE.get_rect(midleft = result_midleft)
                             SURFACE.blit(RESULT_PAIR_SURFACE, RESULT_PAIR_RECT)
 
@@ -314,10 +323,10 @@ def game():
 
                         else: # 다 다른 수
                             if luck_list[0] + luck_list[1] + luck_list[2] == 6: # 123
-                                point_status -= point_bet * 3
+                                point_status -= point_bet * 5
                                 SURFACE.blit(POINT_SURFACE, POINT_RECT)
                                 SURFACE.blit(BET_SURFACE, BET_RECT)
-                                RESULT_123_SURFACE = MAINFONT.render('1 2 3 (-3배) (-' + str(3*point_bet) +'$)', True, RED)
+                                RESULT_123_SURFACE = MAINFONT.render('1 2 3 (-5배) (-' + str(5*point_bet) +'$)', True, RED)
                                 RESULT_123_RECT = RESULT_123_SURFACE.get_rect(midleft = result_midleft)
                                 SURFACE.blit(RESULT_123_SURFACE, RESULT_123_RECT)
                                 pygame.display.update()
@@ -339,7 +348,7 @@ def game():
                                 point_bet = 0
 
                                 pygame.display.update()
-                                pygame.time.delay(2000)
+                                pygame.time.delay(1500)
 
 
                             elif luck_list[0] + luck_list[1] + luck_list [2] == 15: # 456
@@ -354,11 +363,11 @@ def game():
                                 pygame.time.delay(1500)
 
                             else: # 족보 없음
-
+                                point_status -= point_bet
                                 SURFACE.blit(POINT_SURFACE, POINT_RECT)
                                 SURFACE.blit(BET_SURFACE, BET_RECT)
 
-                                RESULT_NOSET_SURFACE = MAINFONT.render("족보 없음 (-1배)(-"+ str(point_bet) +'$)', True, PALERED)
+                                RESULT_NOSET_SURFACE = MAINFONT.render("족보 없음 (-2배)(-"+ str(2 * point_bet) +'$)', True, PALERED)
                                 RESULT_NOSET_RECT = RESULT_NOSET_SURFACE.get_rect(midleft = result_midleft)
                                 SURFACE.blit(RESULT_NOSET_SURFACE, RESULT_NOSET_RECT)
                                 pygame.display.update()
@@ -375,6 +384,7 @@ def game():
 
                                     import DICERS_main
                                     DICERS_main.main()
+
 
                                 point_bet = 0
                                 pygame.display.update()

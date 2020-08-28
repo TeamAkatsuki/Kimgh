@@ -71,7 +71,7 @@ def main():
 
                 if START_RECT.collidepoint(event.pos):
                     START_SURFACE = MAINFONT.render('$ start $', True, RED)
-                    START_RECT = START_SURFACE.get_rect(center = [400, 425])
+                    START_RECT = START_SURFACE.get_rect(center = [400, 430])
                     SURFACE.blit(START_SURFACE, START_RECT)
 
                 elif HTP_RECT.collidepoint(event.pos):
@@ -89,9 +89,15 @@ def main():
                     EXIT_RECT = EXIT_SURFACE.get_rect(center = [400, 520])
                     SURFACE.blit(EXIT_SURFACE, EXIT_RECT)
 
-
                 else:
-                    main()
+                    START_SURFACE = MAINFONT.render('start', True, GRAY)
+                    START_RECT = START_SURFACE.get_rect(center=[400, 430])
+                    HTP_SURFACE = MAINFONT.render('how to play', True, GRAY)
+                    HTP_RECT = HTP_SURFACE.get_rect(center=[400, 460])
+                    RANK_SURFACE = MAINFONT.render('ranking', True, GRAY)
+                    RANK_RECT = RANK_SURFACE.get_rect(center=[400, 490])
+                    EXIT_SURFACE = MAINFONT.render('exit', True, GRAY)
+                    EXIT_RECT = EXIT_SURFACE.get_rect(center=[400, 520])
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if START_RECT.collidepoint(event.pos):
