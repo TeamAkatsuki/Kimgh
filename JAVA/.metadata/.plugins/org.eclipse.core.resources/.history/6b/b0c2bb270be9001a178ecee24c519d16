@@ -44,8 +44,7 @@ public class BankApplication {
 		System.out.println("°èÁÂ»ı¼º");
 		System.out.println("========");
 		System.out.println("°èÁÂ¹øÈ£:");
-		
-		scanner inputAno = scanner.nextLine();
+		String inputAno = scanner.nextLine();
 		
 		
 		
