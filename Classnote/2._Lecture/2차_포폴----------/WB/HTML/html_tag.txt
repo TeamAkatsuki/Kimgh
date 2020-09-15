@@ -1,0 +1,47 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-14T11:48:06+09:00
+
+====== html tag ======
+Created 월요일 14 9월 2020
+
+모~~~~~든 요소의 부모 요소, 웹페이지에 단 하나만 존재.
+
+--------------------
+
+
+===== style tag =====
+
+{{.\pasted_image.png}}
+
+**— 3가지 방법( 헤드에 지정 - 전체 지정 , 앞 태그 안에 지정 - 부분 지정, 외부 링크 - css)**
+Result)
+
+{{.\pasted_image001.png}}
+
+
+--------------------
+
+===== link tag(css related) =====
+
+{{.\pasted_image004.png}}
+
+--------------------
+
+===== script tag(js related) =====
+
+zB)
+{{.\pasted_image002.png}}
+
+Result)
+{{.\pasted_image003.png}}
+
+--------------------
+
+{{.\pasted_image005.png}}
+
+--------------------
+
+
+
+

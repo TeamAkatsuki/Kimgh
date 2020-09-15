@@ -1,0 +1,43 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-14T11:26:06+09:00
+
+====== Attribute ======
+Created 월요일 14 9월 2020
+
+
+===== Attribute =====
+
+요소의 성질, 특징을 정의하는 명세.
+요소에 추가적 정보 (Zb. 이미지 파일의 경로, 크기 등)를 제공한다.
+어트리뷰트는 시작 태그에 위치해야 하며, 이름과 값의 쌍을 이룬다.
+
+Zb)
+
+{{.\pasted_image.png}}
+— src = source
+— alt = alternative
+
+Result)
+{{.\pasted_image002.png}}
+
+**— html의 내용이 위에서 아래로 차례로 정렬되는 것은 하나의 요소가 한 줄을 차지하기 때문, **
+
+
+Zb)
+
+{{.\pasted_image003.png}}
+
+Result)
+{{.\pasted_image004.png}}
+
+--------------------
+
+===== Global Attribute =====
+
+한 개의 HTML이 아니라, 모든 HTML에서 사용할 수 있는 Attribute
+
+{{.\pasted_image005.png}}
+
+**— 위의 class는 우리가 알고 있는 객체의 class가 아니다. 따로 있음.**
+

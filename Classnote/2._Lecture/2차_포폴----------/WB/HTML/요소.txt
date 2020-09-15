@@ -1,0 +1,31 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-14T11:14:37+09:00
+
+====== 요소 ======
+Created 월요일 14 9월 2020
+
+===== 요소 =====
+
+**__start tag - content - end tag__**
+**__로 이루어진 한 단위를 요소(Element)라 총칭.__**
+
+html doc.은 요소들의 집합으로 이루어짐.
+
+--------------------
+
+
+===== 빈 요소(Empty Element) =====
+
+content를 가질 수 없는 요소.
+
+**__start tag - end tag__**
+
+Attribute만을 가질 수 있다.
+
+--------------------
+
+
+
+
+

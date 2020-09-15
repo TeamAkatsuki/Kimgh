@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-14T11:28:03+09:00
+
+====== 주석 ======
+Created 월요일 14 9월 2020
+
+Zb)
+{{.\pasted_image002.png}}
+
+Result)
+{{.\pasted_image.png}}
+**태그 <p>는 paragraph 태그**
+
