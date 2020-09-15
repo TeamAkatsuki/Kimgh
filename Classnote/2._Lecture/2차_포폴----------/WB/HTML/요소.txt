@@ -15,7 +15,7 @@ html doc.은 요소들의 집합으로 이루어짐.
 --------------------
 
 
-===== 빈 요소(Empty Element) =====
+===== 빈 요소(Empty Element, Self-closing Element) =====
 
 content를 가질 수 없는 요소.
 
