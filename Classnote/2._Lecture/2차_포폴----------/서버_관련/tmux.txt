@@ -1,0 +1,23 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.6
+Creation-Date: 2020-09-16T15:52:16+09:00
+
+====== tmux ======
+Created 수요일 16 9월 2020
+
+우분투 실행 후 tmux 프롬프트
+모든 명령 앞에는 ctrl b
+
+창 양옆 나누기
+» shift 5
+
+창 위아래 나누기
+» shift '
+
+
+좌측 이동
+» 좌측 방향키
+
+창 종료
+» exit 입력
+
